@@ -26,8 +26,9 @@ Avant d'installer le projet, assurez-vous que les outils suivants sont installé
 ### 1. Cloner le Dépôt
 Clonez le projet dans votre environnement de développement :
 ```bash
-git clone https://github.com/votreutilisateur/plateforme-vente-betail.git
-cd plateforme-vente-betail```
+git clone git@github.com:quentingarc/cattleMarket.git
+cd plateforme-vente-betail
+```
 
 ### 2. Configuration du Backend (Symfony)
 
