@@ -1,0 +1,8 @@
+controllers:
+    resource: ../src/Controller/
+    type: attribute
+
+app_animal_updateanimal:
+    path: /api/animals/{id}
+    controller: App\Controller\AnimalController::updateAnimal
+    methods: PUT

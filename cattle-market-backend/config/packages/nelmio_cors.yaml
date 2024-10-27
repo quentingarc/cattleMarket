@@ -1,0 +1,11 @@
+nelmio_cors:
+    defaults:
+        allow_origin: ['*'] # Permettre toutes les origines
+        allow_headers: ['Content-Type', 'Authorization']
+        allow_methods: ['GET', 'POST', 'PUT', 'DELETE']
+        max_age: 3600
+    paths:
+        '^/api/': # Ajustez ce chemin selon vos besoins
+            allow_origin: ['*']
+            allow_headers: ['Content-Type', 'Authorization']
+            allow_methods: ['GET', 'POST', 'PUT', 'DELETE']
