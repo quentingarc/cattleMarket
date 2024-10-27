@@ -27,7 +27,7 @@ Avant d'installer le projet, assurez-vous que les outils suivants sont installé
 Clonez le projet dans votre environnement de développement :
 ```bash
 git clone https://github.com/votreutilisateur/plateforme-vente-betail.git
-cd plateforme-vente-betail ```
+cd plateforme-vente-betail```
 
 ### 2. Configuration du Backend (Symfony)
 
