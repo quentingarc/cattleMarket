@@ -18,7 +18,7 @@ Ce projet est une plateforme de vente de bétail destinée aux particuliers, dé
 Avant d'installer le projet, assurez-vous que les outils suivants sont installés sur votre machine :
 - **PHP** 8.1 ou plus récent
 - **Composer** pour la gestion des dépendances PHP
-- **Node.js** et **npm** pour la gestion des dépendances JavaScript
+- **npm** pour la gestion des dépendances JavaScript
 - **Symfony CLI** pour gérer le serveur de développement et les commandes Symfony
 
 ## Installation
@@ -28,7 +28,7 @@ Avant d'installer le projet, assurez-vous que les outils suivants sont installé
 Clonez le projet dans votre environnement de développement :
 ```bash
 git clone git@github.com:quentingarc/cattleMarket.git
-cd plateforme-vente-betail
+cd cattleMarket
 ```
 
 ### 2. Configuration du Backend (Symfony)
@@ -48,7 +48,7 @@ Pour configurer le backend de l'application, suivez les étapes ci-dessous :
    composer install
    ```
 
-3. **Configuration de l'Environnement : Créez un fichier .env.local pour personnaliser les variables d'environnement (ex. base de données SQLite) :**
+3. **Configuration de l'Environnement : Créez un fichier .env pour personnaliser les variables d'environnement (ex. base de données SQLite) :**
 
 ```plaintext
     DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
@@ -58,14 +58,10 @@ Pour configurer le backend de l'application, suivez les étapes ci-dessous :
 ```bash
     php bin/console doctrine:migrations:migrate
 ```
-5. **Créer un Utilisateur Administrateur : Utilisez la commande dédiée pour ajouter un administrateur.**
 
+5. **Lancer le Serveur de Développement Vue.js :**
 ```bash
-    php bin/console app:create-admin-user
-```
-6. **Lancer le Serveur de Développement Vue.js :**
-```bash
-    npm run serve
+    symfony server:start
 ```
 
 Par défaut, l'application sera disponible à http://localhost:8080.
