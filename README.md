@@ -86,7 +86,7 @@ Par défaut, l'application sera disponible à http://localhost:8080.
 3. **Lancer le Serveur de Développement Vue.js :**
 
 ```bash
-    symfony serve
+    symfony serve --no-tls
 ```
 Le backend sera accessible à http://localhost:8000.
 
