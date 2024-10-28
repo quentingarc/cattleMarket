@@ -24,6 +24,7 @@ Avant d'installer le projet, assurez-vous que les outils suivants sont installé
 ## Installation
 
 ### 1. Cloner le Dépôt
+
 Clonez le projet dans votre environnement de développement :
 ```bash
 git clone git@github.com:quentingarc/cattleMarket.git
@@ -34,7 +35,77 @@ cd plateforme-vente-betail
 
 Pour configurer le backend de l'application, suivez les étapes ci-dessous :
 
-1. **Installation des dépendances PHP**  
+1. **Accéder au dossier backend.**
+
+    ```bash
+    cd cattle-market-market
+    ```
+
+2. **Installation des dépendances PHP**  
+
    Dans le répertoire principal du projet, installez les dépendances nécessaires avec Composer :
-   ```bash
+```bash
    composer install
+   ```
+
+3. **Configuration de l'Environnement : Créez un fichier .env.local pour personnaliser les variables d'environnement (ex. base de données SQLite) :**
+
+```plaintext
+    DATABASE_URL="sqlite:///%kernel.project_dir%/var/data.db"
+```
+4. **Exécuter les Migrations : Créez les tables de la base de données nécessaires pour le projet.**
+
+```bash
+    php bin/console doctrine:migrations:migrate
+```
+5. **Créer un Utilisateur Administrateur : Utilisez la commande dédiée pour ajouter un administrateur.**
+
+```bash
+    php bin/console app:create-admin-user
+```
+6. **Lancer le Serveur de Développement Vue.js :**
+```bash
+    npm run serve
+```
+
+Par défaut, l'application sera disponible à http://localhost:8080.
+
+
+### 3. Installation du Frontend (Vue.js)
+
+1. **Accéder au dossier frontend si le frontend est dans un dossier séparé.**
+
+```bash
+    cd cattle-market
+```
+2. **Installer les dépendances JavaScript**
+
+```bash
+    npm install
+```
+3. **Lancer le Serveur de Développement Vue.js :**
+
+```bash
+    symfony serve
+```
+Le backend sera accessible à http://localhost:8000.
+
+## Utilisation
+
+# Accès pour les Particuliers
+Les utilisateurs peuvent :
+
+- Voir la liste des animaux disponibles avec les détails nécessaires.
+- Trier et filtrer les animaux par type, race, âge, etc.
+
+# Accès pour l'Administrateur
+L'administrateur peut :
+
+- Accéder au back-office sécurisé pour ajouter, éditer ou supprimer des animaux.
+- Gérer les informations suivantes pour chaque animal : nom, âge, type, race, description, statut (en vente, vendu), prix HT TTC, et photos.
+
+## Temps de Développement
+
+6 jours 
+
+
